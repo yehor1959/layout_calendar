@@ -1,0 +1,34 @@
+@import "var";
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: ($gap + $box-size) * 7;
+  left: 50%;
+  transform: translateX(-50%);
+
+  div {
+    width: $box-size;
+    height: $box-size;
+    line-height: $box-size;
+    margin-left: $gap;
+    margin-bottom: $gap;
+    color: $box-color;
+    background-color: $box-background-color;
+    border: 1px solid black;
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: pink;
+      transform: translateY(-20px);
+    }
+  }
+
+  @for $i from 1 through 31 {
+    & :nth-child(#{$i})::after {
+      content: "#{$i}";
+    }
+  }
+}

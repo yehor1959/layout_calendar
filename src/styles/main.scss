@@ -1,3 +1,13 @@
+@import "reset";
+@import "calendar";
+@import "calendar-backdown";
+@import "calendar-days";
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
 body {
-  margin: 0;
+  text-align: center;
 }

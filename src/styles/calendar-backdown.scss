@@ -1,0 +1,9 @@
+@import "var";
+
+@each $day, $day-backdown in $days {
+  .calendar-#{$day} {
+    & :first-child {
+      margin-left: ($box-size + $gap) * $day-backdown + $gap;
+    }
+  }
+}
