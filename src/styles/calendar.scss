@@ -3,20 +3,23 @@
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
+  margin: auto;
   width: ($gap + $box-size) * 7;
-  left: 50%;
-  transform: translateX(-50%);
-
+ 
   div {
     width: $box-size;
     height: $box-size;
-    line-height: $box-size;
     margin-left: $gap;
     margin-bottom: $gap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: $box-color;
     background-color: $box-background-color;
     border: 1px solid black;
+
     transition: transform 0.5s, background-color 0.5s;
     cursor: pointer;
 
